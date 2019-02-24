@@ -21,6 +21,11 @@ SQLALCHEMY_TRACK_MODIFICATIONS = False
 db = SQLAlchemy(app)		# database
 
 
+def allowed_file(filename, ALLOWED_EXTENSIONS):
+    """Check whether image is in valid format
+    Return"""
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
 #Login Page
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/login', methods=['GET', 'POST'])
