@@ -20,47 +20,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 db = SQLAlchemy(app)		# database
 
-<<<<<<< Updated upstream:src/main.py
-=======
-class Users(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(80), unique=True, nullable=False)
-    password = db.Column(db.String(80), nullable=False)
-    userType = db.Column(db.String(40), nullable=False)
 
-    def __repr__(self):
-        return f"User('{self.username}', '{self.userType}')"
-
-class Judges(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    judgeName = db.Column(db.String(80), unique=True, nullable=False)
-    totalMoney = db.Column(db.Integer)
-
-    def __repr__(self):
-        return f"Judge('{self.judgeName}', '{self.totalMoney}')"
-
-class Teams(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    teamName = db.Column(db.String(80), unique=True, nullable=False)
-    teamDescription = db.Column(db.String(500), nullable=False)
-    teamPhoto = db.Column(db.String(20), nullable=False, default='team_photo.jpg')
-    totalPoints = db.Column(db.Integer)
-
-    def __repr__(self):
-        return f"Team('{self.teamName}', '{self.totalPoints}')" 
-
-def allowed_file(filename, ALLOWED_EXTENSIONS):
-    """Check whether image is in valid format
-    Return"""
-    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-
-<<<<<<< Updated upstream:src/main.py
-<<<<<<< Updated upstream:src/main.py
->>>>>>> Stashed changes:main.py
-=======
->>>>>>> Stashed changes:main.py
-=======
->>>>>>> Stashed changes:main.py
 #Login Page
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/login', methods=['GET', 'POST'])
