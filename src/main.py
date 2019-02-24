@@ -55,6 +55,9 @@ def allowed_file(filename, ALLOWED_EXTENSIONS):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 <<<<<<< Updated upstream:src/main.py
+<<<<<<< Updated upstream:src/main.py
+>>>>>>> Stashed changes:main.py
+=======
 >>>>>>> Stashed changes:main.py
 =======
 >>>>>>> Stashed changes:main.py
